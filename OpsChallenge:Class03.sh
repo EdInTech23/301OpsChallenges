@@ -1,13 +1,12 @@
 #!/bin/bash
 
-# Get input from the user - a directory to change permissions for
-read -p "what direcroty do you want to change permissions for?" input_dir
+# creat a file to test with
+echo "this is my test file" > test1.txt
 
-# Get permissions that user want to use 
-read -p "What permissions do you want to give folder?" input_perm
 
-# Changing permissions
-chmod -R $input_perm $input_dir
+# Change permissions for the file
+echo "Give our test file all the permissions"
+chmod 777 test1.txt
 
-# Shows the permissions 
-ls -al $input_dir
+# -R= recersef anything in directory will inherit permissions 
+# chmod -R
